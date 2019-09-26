@@ -87,3 +87,5 @@
     while(-not $asyncULTASK.AsyncWaitHandle.WaitOne(250)){}
     return (New-Object -TypeName pscustomobject -Property ([ordered]@{'FileName'=$file.FullName; "CompletedAt"=(Get-Date -UFormat "%m-%d-%y %H:%M:%S")}))
 }
+
+Export-ModuleMember Start-S3MultipartUpload
